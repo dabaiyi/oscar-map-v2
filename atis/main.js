@@ -29,7 +29,7 @@ app.get('/get/:callsign', async (req, res) => {
     let atis = "";
     let count = 0;
     let flag = false;
-    let online = await axios.get('https://map.xnatc.ink/data.php')
+    let online = await axios.get('/data.php')
     let data = online.data.split("\n");
     for (let i = 0; i < data.length; i++) {
         if (data[i].split(":")[2] == callsign) {

@@ -82,12 +82,12 @@ class OscarMapApp {
         
         if (!mapType || mapType === "osm") {
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a>, <a>鲁ICP备2021029425号</a>',
+                attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a>',
                 maxZoom: 18,
             }).addTo(this.map);
         } else if (mapType === "google") {
             L.tileLayer('https://www.google.cn/maps/vt?lyrs=s@189&x={x}&y={y}&z={z}', {
-                attribution: 'Map data © <a href="https://map.google.cn">Google</a>, <a>鲁ICP备2021029425号</a>',
+                attribution: 'Map data © <a href="https://map.google.cn">Google</a>',
                 maxZoom: 18,
             }).addTo(this.map);
         } else if (mapType === "tianditu") {
@@ -98,7 +98,7 @@ class OscarMapApp {
                 success: (data) => {
                     L.tileLayer(`https://t0.tianditu.gov.cn/img_w/wmts?layer=img&style=default&tilematrixset=w&Service=WMTS&Request=GetTile&Version=1.0.0&Format=tiles&TileMatrix={z}&TileCol={x}&TileRow={y}&tk=${data.token.tianditu}`, {
                         maxZoom: 18,
-                        attribution: 'Map data © <a href="https://www.tianditu.gov.cn">天地图</a>, <a>鲁ICP备2021029425号</a>',
+                        attribution: 'Map data © <a href="https://www.tianditu.gov.cn">天地图</a>',
                     }).addTo(this.map);
                 }
             });

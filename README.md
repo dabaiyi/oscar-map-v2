@@ -111,6 +111,7 @@ Oscar Map V2 是一个基于 FSD 的飞行模拟器连飞地图应用，用于�
 应用默认配置了两个数据源：
 - XNATC：`http://www.sparrowhe.top/whazzup.txt`  
 - XHAir：`http://www.xiaohangair.com/vam/dataxn.php`  
+
 您可以在 `data.php` 文件中根据需要修改或添加数据源
 
 ## 技术实现
